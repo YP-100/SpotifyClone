@@ -1,0 +1,254 @@
+@media only screen and (max-width : 391px) {
+    .body {
+        overflow-x: hidden;
+        margin: 0%;
+    }
+
+    .allcontainer {
+        width: 200px;
+        margin: 0px 5px 5px 5px;
+    }
+
+    #left {
+        position: absolute;
+        right: 200%;
+        z-index: 10;
+        width: 250px;
+        height: 600px;
+        background-color: black;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #crossimg {
+        display: inline;
+        margin: 0 0 0 99px;
+        height: 20px;
+        width: 20px;
+    }
+
+    .left button {
+        font-size: 15px;
+    }
+
+    .secound {
+        height: 537px;
+    }
+
+    .buttonsec img {
+        height: 15px;
+        width: 15px;
+    }
+
+    #licon {
+        font-size: 10px;
+    }
+
+    .songname {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .restsec {
+        display: none;
+        font-size: 10px;
+        margin: 0px;
+        /* height: 700px; */
+    }
+
+
+
+
+
+
+
+    #right {
+        width: 100vw;
+    }
+
+    #rbtn1 {
+        font-size: 10px;
+    }
+
+    #rbtn2 {
+        padding: 10px;
+        width: 80px;
+        font-size: 10px;
+    }
+
+    .nav {
+        width: 345px;
+    }
+
+    .iconcont {
+        display: none;
+    }
+
+    .threeline {
+        display: contents;
+    }
+
+    .threeline img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .maincont {
+        width: 377px;
+        /* margin-bottom: 400px; */
+        /* height: 500px; */
+    }
+
+    .maincont::-webkit-scrollbar {
+        display: none;
+    }
+
+    .acards {
+        width: 340px;
+    }
+
+    .pcards {
+        width: 330px;
+        height: 445px;
+        /* gap: 50px; */
+        margin: 20px;
+    }
+
+    .pcardcontainer {
+        cursor: pointer;
+        height: 400px;
+        width: 320px;
+        font-size: 20px;
+        margin: 10px;
+        /* gap: 20px; */
+    }
+
+    .pcardcontainer:hover {
+        .green-button {
+            background-color: rgb(13, 233, 13);
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 9px;
+            right: -10px;
+            opacity: 1;
+        }
+
+    }
+
+    .green-button {
+        /* padding: 20px 10px 20px 30px; */
+        height: 80px;
+        width: 80px;
+        right: -10px;
+        bottom: -10px;
+    }
+
+    .green-button svg {
+        margin: 5px 5px 5px 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .pcardcontainer img {
+        height: 305px;
+        width: 305px;
+    }
+
+    .pcardcontainer a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .playbar {
+        position: fixed;
+        bottom: 0%;
+        width: 377px;
+        font-size: 12px;
+        z-index: 100;
+        /* margin-top: 20px; */
+    }
+
+    .playbar #songinfo .songnn {
+        width: 220px;
+        font-size: 10px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
+
+
+
+@media only screen and (min-height : 400px) and (max-height : 500px) {
+    .maincont {
+        height: 400px;
+        /* background-color: aqua; */
+    }
+}
+@media only screen and (min-height : 501px) and (max-height : 600px) {
+    .maincont {
+        height: 520px;
+        /* background-color: bisque; */
+    }
+    #left{
+        height: 480px;
+        /* background-color: rgb(10, 46, 77); */
+    }
+    #alibrary{
+        height: 260px;
+        margin-bottom: 50px;
+        /* background-color: white; */
+    }
+}
+
+@media only screen and (min-height : 601px) and (max-height : 700px) {
+    .maincont {
+        /* height: 945px; */
+        /* background-color: brown; */
+    }
+    #alibrary{
+        height: 280px;
+    }
+
+}
+
+@media only screen and (min-height : 701px) and (max-height : 800px) and (max-width : 389px) {
+    .maincont {
+         height: 1200px;
+         /* background-color: red;  */
+    }
+    #left{
+         height: 800px; 
+    }
+    #alibrary{
+         height: 500px; 
+    }
+}
+
+@media only screen and (min-height : 801px) and (max-height : 900px) and (max-width : 391px) {
+    .maincont {
+        height: 700px;
+        /* background-color: white; */
+    }
+    #left{
+        height: 800px;
+    }
+}
+
+@media only screen and (min-height : 900px) and (min-height : 2000px) {
+    .maincont {
+        height: 75vh;
+        background-color: purple;
+    }
+    #left{
+        height: 100vh;
+    }
+}
