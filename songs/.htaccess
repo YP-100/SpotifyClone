@@ -1,2 +1,13 @@
-Options +Indexes
-IndexOptions FancyIndexing NameWidth=* DescriptionWidth=*
+# Redirect to https
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Custom error page
+ErrorDocument 404 /custom_404.html
+
+# Deny access to a specific file
+<Files "secret.txt">
+    Order Allow,Deny
+    Deny from all
+</Files>
