@@ -3,11 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    ul{
-    color : black
-    }
-</style>
     <title>Songs Directory</title>
 </head>
 <body>
@@ -19,7 +14,7 @@
     <script>
         window.onload = async function() {
             try {
-                let response = await fetch('./songs/');
+               let response = await fetch('./');
                 if (response.ok) {
                     let html = await response.text();
                     let parser = new DOMParser();
