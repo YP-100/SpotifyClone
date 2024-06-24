@@ -50,10 +50,10 @@ async function getSongs(gfolder) {
 plbtn.addEventListener("click", () => {
     if (currAudio.paused) {
         currAudio.play();
-        pbtnimg.src = "/svg/pause.svg";
+        pbtnimg.src = "	https://yp-100.github.io/SpotifyClone/svg/pause.svg";
     } else {
         currAudio.pause();
-        pbtnimg.src = "/svg/play.svg";
+        pbtnimg.src = "	https://yp-100.github.io/SpotifyClone/svg/play.svg";
     }
 });
 
@@ -101,9 +101,9 @@ const playMusic = (mp3) => {
         circlee.style.left = (currAudio.currentTime / currAudio.duration) * 100 + "%";
     });
 
-
+	
     currAudio.play();
-    pbtnimg.src = "/svg/pause.svg";
+    pbtnimg.src = "	https://yp-100.github.io/SpotifyClone/svg/pause.svg";
     songNameDisplay.innerText = songname;
 };
 
