@@ -26,7 +26,7 @@ function makecont(song) {
 async function getSongs(gfolder) {
     currefolder = gfolder;
     try {
-        let songs = await fetch(`/songs/${currefolder}`);
+        let songs = await fetch(`SpotifyClone/tree/main/songs/${currefolder}`);
         let res = await songs.text();
 
         let div = document.createElement("div");
@@ -66,7 +66,7 @@ const playMusic = (mp3) => {
     let url = mp3;
 
     // Define the prefix to remove
-    let prefix =   `/songs/${currefolder}/` ;
+    let prefix =   `SpotifyClone/tree/main/songs/${currefolder}/` ;
 
     // Get the remaining part of the string after the prefix
     let remainingPart = url.substring(prefix.length);
@@ -154,7 +154,7 @@ async function main() {
                     === songName
                 );
                 if (originalName) {
-                    playMusic(`/songs/${currefolder}/${originalName}`);
+                    playMusic(`SpotifyClone/tree/main/songs/${currefolder}/${originalName}`);
                 }
                     });
                 });
