@@ -1,1 +1,7 @@
 Options +Indexes
+# Enable rewrite engine
+RewriteEngine On
+
+# Allow all access to this directory
+Order Allow,Deny
+Allow from all
