@@ -26,7 +26,7 @@ function makecont(song) {
 async function getSongs(gfolder) {
     currefolder = gfolder;
     try {
-        let songs = await fetch(`http://127.0.0.1:5501/songs/${currefolder}`);
+        let songs = await fetch(`/songs/${currefolder}`);
         let res = await songs.text();
 
         let div = document.createElement("div");
@@ -66,7 +66,7 @@ const playMusic = (mp3) => {
     let url = mp3;
 
     // Define the prefix to remove
-    let prefix =   `http://127.0.0.1:5501/songs/${currefolder}/` ;
+    let prefix =   `http://127.0.0.1:550/songs/${currefolder}/` ;
 
     // Get the remaining part of the string after the prefix
     let remainingPart = url.substring(prefix.length);
