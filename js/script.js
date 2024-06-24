@@ -26,7 +26,7 @@ function makecont(song) {
 async function getSongs(gfolder) {
     currefolder = gfolder;
     try {
-        let songs = await fetch(`SpotifyClone/tree/main/songs/${currefolder}`);
+        let songs = await fetch(`SpotifyClone/blob/main/songs/${currefolder}`);
         let res = await songs.text();
 
         let div = document.createElement("div");
@@ -66,7 +66,7 @@ const playMusic = (mp3) => {
     let url = mp3;
 
     // Define the prefix to remove
-    let prefix =   `SpotifyClone/tree/main/songs/${currefolder}/` ;
+    let prefix =   `SpotifyClone/blob/main/songs/${currefolder}/` ;
 
     // Get the remaining part of the string after the prefix
     let remainingPart = url.substring(prefix.length);
@@ -154,7 +154,7 @@ async function main() {
                     === songName
                 );
                 if (originalName) {
-                    playMusic(`SpotifyClone/tree/main/songs/${currefolder}/${originalName}`);
+                    playMusic(`SpotifyClone/blob/main/songs/${currefolder}/${originalName}`);
                 }
                     });
                 });
@@ -202,7 +202,7 @@ async function main() {
                     === songName
                 );
                 if (originalName) {
-                    playMusic(`http://127.0.0.1:5501/songs/${currefolder}/${originalName}`);
+                    playMusic(`SpotifyClone/blob/main/songs/${currefolder}/${originalName}`);
                 }
             });
         });
@@ -220,7 +220,7 @@ async function main() {
         // console.log(currAudio)
 
     // Define the prefix to remove
-    let prefix =   `http://127.0.0.1:5501/songs/${currefolder}/`;
+    let prefix =   `SpotifyClone/blob/main/songs/${currefolder}/`;
 
     // Get the remaining part of the string after the prefix
     let remainingPart = url.substring(prefix.length);
@@ -231,7 +231,7 @@ async function main() {
 
     if (indexof != 0) {
         // playMusic(currAudio[indexof]+1);
-        playMusic(`http://127.0.0.1:5501/songs/${currefolder}/${sname[indexof - 1]}`);
+        playMusic(`SpotifyClone/blob/main/songs/${currefolder}/${sname[indexof - 1]}`);
     }
     })
 
@@ -241,7 +241,7 @@ async function main() {
         // console.log(currAudio)
 
     // Define the prefix to remove
-    let prefix = `http://127.0.0.1:5501/songs/${currefolder}/`;
+    let prefix = `SpotifyClone/blob/main/songs/${currefolder}/`;
 
     // Get the remaining part of the string after the prefix
     let remainingPart = url.substring(prefix.length);
@@ -252,7 +252,7 @@ async function main() {
 
     if (indexof < sname.length-1) {
         // playMusic(currAudio[indexof]+1);
-        playMusic(`http://127.0.0.1:5501/songs/${currefolder}/${sname[indexof + 1]}`);
+        playMusic(`SpotifyClone/blob/main/songs/${currefolder}/${sname[indexof + 1]}`);
     }
     })
 
