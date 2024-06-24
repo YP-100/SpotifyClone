@@ -26,7 +26,8 @@ function makecont(song) {
 async function getSongs(gfolder) {
     currefolder = gfolder;
     try {
-        let songs = await fetch(`/blob/main/songs/${currefolder}`);
+        let songs = await fetch(`https://raw.githubusercontent.com/YP-100/SpotifyClone/main/songs/
+${currefolder}`);
         let res = await songs.text();
 
         let div = document.createElement("div");
@@ -66,7 +67,8 @@ const playMusic = (mp3) => {
     let url = mp3;
 
     // Define the prefix to remove
-    let prefix =   `/blob/main/songs/${currefolder}/` ;
+    let prefix =   `https://raw.githubusercontent.com/YP-100/SpotifyClone/main/songs/
+${currefolder}/` ;
 
     // Get the remaining part of the string after the prefix
     let remainingPart = url.substring(prefix.length);
@@ -154,7 +156,8 @@ async function main() {
                     === songName
                 );
                 if (originalName) {
-                    playMusic(`/blob/main/songs/${currefolder}/${originalName}`);
+                    playMusic(`https://raw.githubusercontent.com/YP-100/SpotifyClone/main/songs/
+${currefolder}/${originalName}`);
                 }
                     });
                 });
@@ -202,7 +205,8 @@ async function main() {
                     === songName
                 );
                 if (originalName) {
-                    playMusic(`/blob/main/songs/${currefolder}/${originalName}`);
+                    playMusic(`https://raw.githubusercontent.com/YP-100/SpotifyClone/main/songs/
+${currefolder}/${originalName}`);
                 }
             });
         });
@@ -231,7 +235,8 @@ async function main() {
 
     if (indexof != 0) {
         // playMusic(currAudio[indexof]+1);
-        playMusic(`/blob/main/songs/${currefolder}/${sname[indexof - 1]}`);
+        playMusic(`https://raw.githubusercontent.com/YP-100/SpotifyClone/main/songs/
+${currefolder}/${sname[indexof - 1]}`);
     }
     })
 
@@ -252,7 +257,8 @@ async function main() {
 
     if (indexof < sname.length-1) {
         // playMusic(currAudio[indexof]+1);
-        playMusic(`/blob/main/songs/${currefolder}/${sname[indexof + 1]}`);
+        playMusic(`https://raw.githubusercontent.com/YP-100/SpotifyClone/main/songs/
+${currefolder}/${sname[indexof + 1]}`);
     }
     })
 
