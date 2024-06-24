@@ -66,7 +66,7 @@ const playMusic = (mp3) => {
     let url = mp3;
 
     // Define the prefix to remove
-    let prefix =   `http://127.0.0.1:550/songs/${currefolder}/` ;
+    let prefix =   `/songs/${currefolder}/` ;
 
     // Get the remaining part of the string after the prefix
     let remainingPart = url.substring(prefix.length);
@@ -154,7 +154,7 @@ async function main() {
                     === songName
                 );
                 if (originalName) {
-                    playMusic(`http://127.0.0.1:5501/songs/${currefolder}/${originalName}`);
+                    playMusic(`/songs/${currefolder}/${originalName}`);
                 }
                     });
                 });
